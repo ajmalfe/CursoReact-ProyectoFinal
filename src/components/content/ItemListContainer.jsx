@@ -22,7 +22,10 @@ const ItemListContainer = ({listCategorias}) => {
                     <div className="card-header">
                       <h4>{producto.nombre}</h4>
                     </div>
-                    <img src={`${producto.img}`} className="img-fluid rounded-start" style={{"maxWidth": "20rem", "maxHeight": "20rem"}} />
+
+                    <div className='text-center'>
+                      <img src={`${producto.img}`} className="img-fluid rounded-start" style={{"maxWidth": "20rem"}} />
+                    </div>
                     
                     <div className="card-body" style={{"backgroundColor": "#d5dbe3"}}>
                     <p className="card-text">Marca: <b>{producto.marca}</b></p>
