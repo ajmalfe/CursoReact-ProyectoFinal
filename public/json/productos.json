@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mouse Inalambrico Logitech G502",
+        "marca": "Logitech",
+        "modelo": "G502",
+        "precio": 3000,
+        "stock": 3000,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_2X_698633-MLA40117100160_122019-F.webp",
+        "categoria": "Mouse"
+    },
+    {
+        "id": 2,
+        "nombre": "Mouse Razer Basilisk V3 Pro",
+        "marca": "Razer",
+        "modelo": "Basilisk V3 Pro",
+        "precio": 24150,
+        "stock": 8,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_2X_876137-MLA48173515406_112021-F.webp",
+        "categoria": "Mouse"
+    },
+    {
+        "id": 3,
+        "nombre": "Mouse de juego Xinua M3",
+        "marca": "Xinua",
+        "modelo": "M3",
+        "precio": 12000,
+        "stock": 1,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_631335-MLA49985566585_052022-O.webp",
+        "categoria": "Mouse"
+    },
+    {
+        "id": 4,
+        "nombre": "Mouse de juego HyperX Pulsefire Raid",
+        "marca": "HyperX",
+        "modelo": "Pulsefire Raid",
+        "precio": 25000,
+        "stock": 8,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_2X_957873-MLA44482299820_012021-F.webp",
+        "categoria": "Mouse"
+    },
+    {
+        "id": 5,
+        "nombre": "Teclado Hyperx Alloy Origins 65 Rgb Hx",
+        "marca": "HyperX",
+        "modelo": "Alloy Origins 65 Rgb Hx Aqua",
+        "precio": 18000,
+        "stock": 8,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_905321-MLA50044768904_052022-O.webp",
+        "categoria": "Teclados"
+    },
+    {
+        "id": 6,
+        "nombre": "Teclado gamer Redragon ",
+        "marca": "Redragon",
+        "modelo": "Vata Pro K580RGB-PRO",
+        "precio": 18000,
+        "stock": 8,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_960160-MLA45292144835_032021-O.webp",
+        "categoria": "Teclados"
+    },
+    {
+        "id": 7,
+        "nombre": "Teclado inalámbrico Logitech K230 ",
+        "marca": "Logitech",
+        "modelo": "K230",
+        "precio": 18000,
+        "stock": 8,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_2X_774247-MLA32880808533_112019-F.webp",
+        "categoria": "Teclados"
+    },
+    {
+        "id": 8,
+        "nombre": "Pendrive SanDisk Cruzer Blade 128GB 2.0",
+        "marca": "SanDisk",
+        "modelo": "Cruzer Blade 128GB 2.0",
+        "precio": 3200,
+        "stock": 1,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_882354-MLA32122794459_092019-O.webp",
+        "categoria": "Pendrive"
+    },
+    {
+        "id": 9,
+        "nombre": "Auriculares Bluetooth 5.0",
+        "marca": "Generico",
+        "modelo": "Bluetooth 5.0",
+        "precio": 4990,
+        "stock": 1,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_710840-MLA51608856793_092022-O.webp",
+        "categoria": "Auriculares"
+    }
+    
+    
+]

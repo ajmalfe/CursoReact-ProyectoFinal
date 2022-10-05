@@ -1,39 +1,33 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import React from 'react';
-import Navbar from './components/Navbar'
+import Navbar from './components/content/Navbar';
 import './App.css'
-import ItemListContainer from './components/ItemListContainer';
-import Menu from './components/Menu';
+import Home from './components/content/Home';
+import Producto from './components/content/Producto';
+import About from './components/content/About';
+import Contacto from './components/content/Contacto';
+import Carrito from './components/content/Carrito';
+import Footer from './components/content/Footer';
+import Categoria from './components/content/Categoria';
 
 const App = () => {
 
-    const listCategorias = [["Mouse", 10], ["Pen Drive", 5], ["Auriculares", 3], ["Teclados", 8]];
-    const listItems = ["Mouse Inalambrico Logitech G502", "Mouse Razer Basilisk V3 Pro", "Mouse de juego Xinua M3", "Mouse de juego HyperX  Pulsefire Raid"];
+    let listCategorias = ["Mouse", "Pendrive", "Auriculares", "Teclados"];
 
     return (
       <>
-        <Navbar lista={listCategorias}/>
-        <div className="bs-docs-section clearfix">
-          <div className="row">
-            <div className="col-lg-4">
-              <div className="page-header">
-                <h1 className="p-4">Categorías</h1>
-              </div>
-              <Menu lista={listCategorias} />
-            </div>
-            <div className="col-lg-8">
-              <div className="page-header">
-                <h1 className="p-4">Productos</h1>
-              </div>
-              {
-                listItems.map(item => {
-                  return (<ItemListContainer item={item}/> )
-                })
-              }               
-            </div>
-          </div>
-        </div>
-      
-
+        <BrowserRouter>
+          <Navbar lista={listCategorias} />
+          <Routes>
+            <Route path="/" element={<Home listCategorias={listCategorias}/>} />
+            <Route path="/producto/:id" element={<Producto/>} />
+            <Route path="/categoria/:categoria" element={<Categoria listCategorias={listCategorias}/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/contacto" element={<Contacto/>} />
+            <Route path="/carrito" element={<Carrito/>} />
+          </Routes>
+          <Footer/>
+        </BrowserRouter>
       </>
     );
 }
