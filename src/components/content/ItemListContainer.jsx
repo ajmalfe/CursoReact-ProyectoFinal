@@ -1,17 +1,20 @@
 import React, {useState, useEffect} from 'react';
-import ItemListContainer from '../layout/ItemListContainer';
 import Menu from '../layout/Menu';
-import Producto from './Producto';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
-const Home = ({listCategorias}) => {
+const ItemListContainer = ({listCategorias}) => {
 
     const [productos, setProductos] = useState([]);
+
+    const {categoria} = useParams();
+
     useEffect(() => {
 
         const consultarItem = async () => {
             const response = await fetch('../json/productos.json')
-            const productos = await response.json();
+            const productosTodos = await response.json();
+
+            const productos = productosTodos.filter(producto => (categoria ? producto.categoria == categoria : true))
 
             const cardProductos = productos.map(producto => 
                 <div className="col-md-4">
@@ -26,7 +29,7 @@ const Home = ({listCategorias}) => {
                     <p className="card-text">Modelo: <b>{producto.modelo}</b></p>
                     <p className="card-text">Precio: <b>${producto.precio}</b></p>
                     <p className="card-text">Stock: {producto.stock}</p>
-                    <Link className='btn btn-dark' style={{"float": "right"}} to={"/producto/" + producto.id} >VER PRODUCTO</Link>
+                    <Link className='btn btn-dark' style={{"float": "right"}} to={"/item/" + producto.id} >VER PRODUCTO</Link>
                   </div>
                 </div>
               </div>
@@ -40,7 +43,7 @@ const Home = ({listCategorias}) => {
         return () => {
 
         };
-    }, []);
+    }, [categoria]);
 
     return (
         <div className="bs-docs-section clearfix">
@@ -53,7 +56,8 @@ const Home = ({listCategorias}) => {
           </div>
           <div className="col-lg-9">
             <div className="page-header">
-              <h1 className="p-4">Productos</h1>
+              <h1 className="p-1"><span>Productos</span></h1>
+              <h3 className="p-1">{categoria}</h3>
             </div>
             <div className="row" style={{"--bs-gutter-x": "0"}}>
               {productos}
@@ -64,4 +68,4 @@ const Home = ({listCategorias}) => {
     );
 }
 
-export default Home;
+export default ItemListContainer;

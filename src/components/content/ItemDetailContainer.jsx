@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-import DetalleProducto from './DetalleProducto';
+import ItemDetail from './ItemDetail';
 
 const Producto = () => {
 
@@ -11,9 +11,7 @@ const Producto = () => {
         fetch('../json/productos.json')
         .then(response => response.json())
         .then(productos => {   
-            console.log({id});
             const producto1 = productos.find(productArray => productArray.id == id)
-            console.log(producto1);
             setProducto(producto1);
         })
     }, [])
@@ -21,7 +19,7 @@ const Producto = () => {
     return (
         <>
             <div className="card mb-3 m-4 p-4">
-                <DetalleProducto producto={producto} />
+                <ItemDetail producto={producto} />
             </div>
         </>
     );

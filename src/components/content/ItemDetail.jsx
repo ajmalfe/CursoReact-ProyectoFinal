@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const DetalleProducto = ({producto}) => {
+const ItemDetail = ({producto}) => {
 
     const [cantidad, setCantidad] = useState(1);
     const carrito = [];
@@ -66,4 +66,4 @@ const DetalleProducto = ({producto}) => {
     );
 }
 
-export default DetalleProducto;
+export default ItemDetail;
