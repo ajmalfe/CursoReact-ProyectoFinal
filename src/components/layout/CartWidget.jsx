@@ -4,7 +4,7 @@ import { CarritoContext } from '../../context/CarritoContext';
 
 function CartWidget() {
 
-    const {carrito} = useContext(CarritoContext);
+    const {carrito, cantidadCarrito} = useContext(CarritoContext);
     const [valor, setValor] = useState(0);
 
     const cambiarValor = () => {
@@ -22,7 +22,7 @@ function CartWidget() {
             </Link>
             <button onClick={() => cambiarValor()}>PRUEBA</button>
             <span className='badge bg-danger mb-3 l-10'>
-                {valor}
+                {cantidadCarrito()}
             </span>
         </>
     );
