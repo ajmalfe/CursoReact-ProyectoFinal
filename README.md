@@ -4,6 +4,8 @@ Este proyecto esta realizado en React y Bootstrap, es el proyecto final de el cu
 
 Es un Ecommerce de productos de computacion
 
+En la carpeta doc ver gif: PreEntrega2-Navegacion.gif
+
 ## Dependencias instaladas
 
 - [React-Bootstrap](https://react-bootstrap.github.io/)

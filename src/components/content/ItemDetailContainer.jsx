@@ -11,7 +11,7 @@ const Producto = () => {
         fetch('../json/productos.json')
         .then(response => response.json())
         .then(productos => {   
-            const producto1 = productos.find(productArray => productArray.id == id)
+            const producto1 = productos.find(p => p.id == id)
             setProducto(producto1);
         })
     }, [])

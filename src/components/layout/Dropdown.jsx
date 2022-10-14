@@ -8,7 +8,7 @@ const Dropdown = ({lista}) => {
             <div className="dropdown-menu">
                 {
                     lista.map((element, indice) => {
-                        return (<Link className="dropdown-item" to={"/categoria/" + element}>{element}</Link>)
+                        return (<Link key={indice} className="dropdown-item" to={"/categoria/" + element}>{element}</Link>)
                     })
                 }
             </div>

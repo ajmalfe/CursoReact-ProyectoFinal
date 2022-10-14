@@ -1,25 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
+import { CarritoContext } from '../../context/CarritoContext';
+import { useState, useContext } from 'react';
 
 const ItemDetail = ({producto}) => {
 
     const [cantidad, setCantidad] = useState(1);
-    const carrito = [];
+    //const  = [];
 
-    const agregarAlCarrito = (prod, cantidad) => {
-        let indice = carrito.findIndex(p => p.id = prod.id);
-
-        const prodCarrito = {id: prod.id, cantidad: cantidad}
-
-        if(indice != -1) {
-            carrito[indice] = prodCarrito;
-        }
-        else {
-            carrito.push(prodCarrito);
-        }
-
-        console.log(carrito);
-    }
+    const {carrito, agregarProducto, quitarProducto} = useContext(CarritoContext);
 
     const cantProducto = (operacion) => {
         if(operacion == "+")
@@ -56,7 +44,7 @@ const ItemDetail = ({producto}) => {
                         <p className="card-text">Cantidad: {cantidad}</p>
                         <button className='btn btn-dark' onClick={() => cantProducto("-")}>-</button>
 
-                        <button className='btn btn-dark' style={{"right": "10px", "bottom": "10px", "position": "absolute"}} onClick={() => agregarAlCarrito(producto, cantidad)}>Agregar al Carrito</button>
+                        <button className='btn btn-dark' style={{"right": "10px", "bottom": "10px", "position": "absolute"}} onClick={() => agregarProducto(producto, cantidad)}>Agregar al Carrito</button>
                     </div>
                 </div>
 

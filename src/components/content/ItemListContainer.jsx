@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import Menu from '../layout/Menu';
 import { Link, useParams } from 'react-router-dom';
 
@@ -8,6 +8,7 @@ const ItemListContainer = ({listCategorias}) => {
 
     const {categoria} = useParams();
 
+    
     useEffect(() => {
 
         const consultarItem = async () => {
@@ -17,14 +18,14 @@ const ItemListContainer = ({listCategorias}) => {
             const productos = productosTodos.filter(producto => (categoria ? producto.categoria == categoria : true))
 
             const cardProductos = productos.map(producto => 
-                <div className="col-md-4">
+                <div className="col-md-4" key={producto.id}>
                   <div className='card border-secondary m-4' key={producto.id}>
                     <div className="card-header">
                       <h4>{producto.nombre}</h4>
                     </div>
 
                     <div className='text-center'>
-                      <img src={`${producto.img}`} className="img-fluid rounded-start" style={{"maxWidth": "20rem"}} />
+                      <img src={`${producto.img}`} className="img-fluid rounded-start img-same" />
                     </div>
                     
                     <div className="card-body" style={{"backgroundColor": "#d5dbe3"}}>
