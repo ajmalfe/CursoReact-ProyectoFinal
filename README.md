@@ -1,15 +1,13 @@
-# PREENTREGA2 por ALEJANDRO MALFETANO
+# CURSO 34755 reactjs
+# PROYECTO FINAL 
+# ALUMNO: Alejandro Malfetano
+# PROFESOR: Francisco Pugh
 
-Este proyecto esta realizado en React y Bootstrap, es el proyecto final de el curso de React dictado en [CoderHouse](https://www.coderhouse.com)
+Este proyecto esta realizado en React y Bootstrap, es el proyecto final de el curso de React dictado en [CoderHouse] (https://www.coderhouse.com)
 
 Es un Ecommerce de productos de computacion
 
-En la carpeta doc ver gif: PreEntrega2-Navegacion.gif
-
-## Dependencias instaladas
-
-- [React-Bootstrap](https://react-bootstrap.github.io/)
-- [React-router-dom](https://v5.reactrouter.com/)
-- [Bootstrap](https://getbootstrap.com/)
+# En el siguiente link se muestra un video de como realizar una compra con el carrito
+https://vimeo.com/763966517/7716fb6e56
 
 ## Gif use demo
