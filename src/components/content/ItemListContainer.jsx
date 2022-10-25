@@ -1,39 +1,38 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 import Menu from '../layout/Menu';
 import { Link, useParams } from 'react-router-dom';
+import { getProductos } from '../../utils/funciones/firebase';
 
 const ItemListContainer = ({listCategorias}) => {
 
     const [productos, setProductos] = useState([]);
 
     const {categoria} = useParams();
-
     
     useEffect(() => {
 
         const consultarItem = async () => {
-            const response = await fetch('../json/productos.json')
-            const productosTodos = await response.json();
+            const productosTodos = await getProductos();
 
-            const productos = productosTodos.filter(producto => (categoria ? producto.categoria == categoria : true))
+            const productos = productosTodos.filter(producto => (categoria ? producto[1].categoria === categoria : true))
 
             const cardProductos = productos.map(producto => 
-                <div className="col-md-4" key={producto.id}>
-                  <div className='card border-secondary m-4' key={producto.id}>
+                <div className="col-md-4" key={producto[0]}>
+                  <div className='card border-secondary m-4' key={producto[0]}>
                     <div className="card-header">
-                      <h4>{producto.nombre}</h4>
+                      <h4>{producto[1].nombre}</h4>
                     </div>
 
                     <div className='text-center'>
-                      <img src={`${producto.img}`} className="img-fluid rounded-start img-same" />
+                      <img src={`${producto[1].img}`} className="img-fluid rounded-start img-same" alt="Imagen Producto" />
                     </div>
                     
                     <div className="card-body" style={{"backgroundColor": "#d5dbe3"}}>
-                    <p className="card-text">Marca: <b>{producto.marca}</b></p>
-                    <p className="card-text">Modelo: <b>{producto.modelo}</b></p>
-                    <p className="card-text">Precio: <b>${producto.precio}</b></p>
-                    <p className="card-text">Stock: {producto.stock}</p>
-                    <Link className='btn btn-dark' style={{"float": "right"}} to={"/item/" + producto.id} >VER PRODUCTO</Link>
+                    <p className="card-text">Marca: <b>{producto[1].marca}</b></p>
+                    <p className="card-text">Modelo: <b>{producto[1].modelo}</b></p>
+                    <p className="card-text">Precio: <b>${producto[1].precio}</b></p>
+                    <p className="card-text">Stock: {producto[1].stock}</p>
+                    <Link className='btn btn-dark' style={{"float": "right"}} to={"/item/" + producto[0]} >VER PRODUCTO</Link>
                   </div>
                 </div>
               </div>

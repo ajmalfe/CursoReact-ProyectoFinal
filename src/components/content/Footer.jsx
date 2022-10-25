@@ -2,7 +2,7 @@ import React, {memo} from 'react';
 
 const Footer = () => {
     return (
-        <footer className="footer  bg-dark">
+        <footer className="footer bg-dark">
             <div className="container footer-contact">
                 <div className="row ">
                     <div className="col-md-7 col-lg-4 mb-lg-0 pt-3">

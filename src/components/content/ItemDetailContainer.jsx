@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
+import { getProducto } from '../../utils/funciones/firebase';
 import ItemDetail from './ItemDetail';
 
 const Producto = () => {
@@ -8,12 +9,20 @@ const Producto = () => {
     const {id} = useParams();
 
     useEffect(() => {
-        fetch('../json/productos.json')
-        .then(response => response.json())
-        .then(productos => {   
-            const producto1 = productos.find(p => p.id == id)
-            setProducto(producto1);
-        })
+        const consultarItem = async () => {
+
+            const p = await getProducto(id);
+
+            p[1].id = id;
+            
+            setProducto(p[1]);
+        }
+
+        consultarItem();
+
+        return () => {
+
+        };
     }, [])
 
     return (

@@ -1,0 +1,103 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mouse Inalambrico Logitech G502",
+        "marca": "Logitech",
+        "modelo": "G502",
+        "precio": 3000,
+        "stock": 1,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-27c36.appspot.com/o/img%2Fmouse-logitech-g502.jpg?alt=media&token=481809c0-5de1-47f0-a91c-23c27b71ae06",
+        "categoria": "Mouse",
+        "descripcion": "Ahora puedes jugar con más rapidez y precisión con G502 LIGHTSPEED, dotado de conectividad inalámbrica superrápida de 1 ms. Un sensor HERO de próxima generación ofrece rendimiento de 16.000 dpi y eficiencia energética superiores, dándote hasta 60 horas de juego ininterrumpido. Once botones programables te ayudan a optimizar el juego con enlaces de teclas y macros personalizadas. Los botones principales tienen tensión de resorte metálico para una actuación rápida y precisa. Seis pesas personalizables te permiten configurar la sensación del ratón en la mano. RGB LIGHTSYNC proporciona ~16,8 millones de colores para crear un entorno de juego emocionante e inmersivo. El botón rueda para desplazamiento superrápido permite recorrer a toda velocidad menús y documentos largos. Empareja con POWERPLAY para disponer de carga infinita."
+    },
+    {
+        "id": 2,
+        "nombre": "Mouse Razer Basilisk V3 Pro",
+        "marca": "Razer",
+        "modelo": "Basilisk V3 Pro",
+        "precio": 24150,
+        "stock": 2,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-27c36.appspot.com/o/img%2Fmouse-razer-basilisk-v3-pro.jpg?alt=media&token=f836a696-a40e-4802-884d-9a62c2007e65",
+        "categoria": "Mouse",
+        "descripcion": "Desde 2005 Razer es la marca líder de estilo de vida para jugadores. Ha diseñado y construido el ecosistema de hardware, software y servicios más grande del mundo. La ubicación de cada botón y curva de los mouses Razer se crearon para adaptarse perfectamente a tu mano. Gracias a estos dispositivos, conseguirás una experiencia de juego cómoda y placentera."
+    },
+    {
+        "id": 3,
+        "nombre": "Mouse de juego Xinua M3",
+        "marca": "Xinua",
+        "modelo": "M3",
+        "precio": 12000,
+        "stock": 3,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-27c36.appspot.com/o/img%2Fmouse-xinua-m3.jpg?alt=media&token=b5e6d606-21a7-4b92-acd7-444aca4956c3",
+        "categoria": "Mouse",
+        "descripcion": "Para trabajar desde casa con la computadora o aprovechar los momentos de ocio, necesitás comodidad y facilidad de movimiento. Con tu Xinua M3 encontrá eso que buscás en un solo aparato con la mejor tecnología."
+    },
+    {
+        "id": 4,
+        "nombre": "Mouse de juego HyperX Pulsefire Raid",
+        "marca": "HyperX",
+        "modelo": "Pulsefire Raid",
+        "precio": 25000,
+        "stock": 4,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-27c36.appspot.com/o/img%2Fmouse-hiperx-pulsefire-raid.jpg?alt=media&token=4148d1e7-1bcd-46a1-aa65-76032bf5acf9",
+        "categoria": "Mouse",
+        "descripcion": "Para trabajar desde casa con la computadora o aprovechar los momentos de ocio, necesitás comodidad y facilidad de movimiento. Con tu HyperX Pulsefire Raid encontrá eso que buscás en un solo aparato con la mejor tecnología."
+    },
+    {
+        "id": 5,
+        "nombre": "Teclado Hyperx Alloy Origins 65 Rgb Hx",
+        "marca": "HyperX",
+        "modelo": "Alloy Origins 65 Rgb Hx Aqua",
+        "precio": 18000,
+        "stock": 5,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-27c36.appspot.com/o/img%2Fteclado-hyperx-alloy.jpg?alt=media&token=ecb7f686-16bb-4be7-945e-3ee23db71a37",
+        "categoria": "Teclados",
+        "descripcion": ""
+    },
+    {
+        "id": 6,
+        "nombre": "Teclado gamer Redragon ",
+        "marca": "Redragon",
+        "modelo": "Vata Pro K580RGB-PRO",
+        "precio": 18000,
+        "stock": 6,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-27c36.appspot.com/o/img%2Fteclado-redragon-vata-pro.jpg?alt=media&token=4ac19975-0ae0-4239-9821-c77ae2b70be6",
+        "categoria": "Teclados",
+        "descripcion": "Este teclado HyperX de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos. Está diseñado especialmente para que puedas expresar tanto tus habilidades como tu estilo. Podrás mejorar tu experiencia de gaming, ya seas un aficionado o todo un experto y hacer que tus jugadas alcancen otro nivel."
+    },
+    {
+        "id": 7,
+        "nombre": "Teclado inalámbrico Logitech K230 ",
+        "marca": "Logitech",
+        "modelo": "K230",
+        "precio": 18000,
+        "stock": 7,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-27c36.appspot.com/o/img%2Fteclado-logitech-k230.jpg?alt=media&token=35682afd-e8aa-4327-bab5-2d010658c6ea",
+        "categoria": "Teclados",
+        "descripcion": "Wireless Keyboard K230. El teclado compacto que añade diversión a las funciones básicas."
+    },
+    {
+        "id": 8,
+        "nombre": "Pendrive SanDisk Cruzer Blade 128GB 2.0",
+        "marca": "SanDisk",
+        "modelo": "Cruzer Blade 128GB 2.0",
+        "precio": 3200,
+        "stock": 8,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-27c36.appspot.com/o/img%2Fpendrive-sandisk-cruzer-128gb-2-0.jpg?alt=media&token=9f4fccf3-d989-4bbc-b08e-3e134a792edb",
+        "categoria": "Pendrive",
+        "descripcion": "SanDisk es sinónimo de rendimiento, calidad y confiabilidad. Sus dispositivos se destacan por un estilo moderno y compacto; a su vez, por su gran capacidad de almacenamiento que te brindarán la posibilidad de realizar copias de seguridad de tus archivos, transferirlos y compartirlos. Esta unidad USB te permitirá llevar tus fotos, películas, música y datos personales dondequiera que vayas."
+    },
+    {
+        "id": 9,
+        "nombre": "Auriculares Bluetooth 5.0",
+        "marca": "Generico",
+        "modelo": "Bluetooth 5.0",
+        "precio": 4990,
+        "stock": 9,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-27c36.appspot.com/o/img%2Fauriculares-genericos-bluetooth-5-0.jpg?alt=media&token=446ce272-30df-4716-96d8-367df409fd52",
+        "categoria": "Auriculares",
+        "descripcion": "Auriculares Vincha Bluetooth Sport con puerto de carga mini-USB de 5 pines"
+    }
+    
+    
+]

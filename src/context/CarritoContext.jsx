@@ -5,50 +5,53 @@ const CarritoContext = createContext();
 const CarritoProvider = (props) => {
 
     const [carrito, setCarrito] = useState([]);
-    const [cantidad, setCantidad] = useState(0);
-
+    
     const agregarProducto = (prod, cant) => {
         const aux = carrito;
-        let indice = aux.findIndex(producto => producto.id == prod.id)
+        let indice = aux.findIndex(producto => producto.id === prod.id)
 
-        if(indice != -1){
+        if(indice !== -1){
             aux[indice].cantidad = cant;
         }
         else{
-            const prodCarrito = {id: prod.id, cantidad: cant}
-            aux.push(prodCarrito);
+            prod.cantidad = cant;
+            aux.push(prod);
         }
 
-        setCarrito(aux);
-
-        //console.log(aux);
-        console.log(carrito);
-        console.log(carrito.length);
+        setCarrito([...aux]);
     }
 
     const quitarProducto = (prod) => {
         const aux = carrito;
-        let indice = aux.findIndex(producto => producto.id == prod.id)
+        let indice = aux.findIndex(producto => producto.id === prod.id)
 
         if(indice >= 0)
         {
             aux.splice(indice, 1);
-            setCarrito(aux);
         }
 
-        console.log(carrito);
-        console.log(carrito.length);
+        setCarrito([...aux]);
     }
 
-    const cantidadCarrito = () => {
-        const cant = carrito.length;
-        setCantidad(cant);
-        return cant;
+    const vaciarCarrito = (prod) => {
+        setCarrito([]);
+    }
+
+    const calcularCantidad = () => {
+        let subtotal = 0;
+        carrito.map((prod) => (subtotal += (prod.cantidad))); 
+        return subtotal;
+    }
+
+    const calcularImporteTotal = () => {
+        let subtotal = 0;
+        carrito.map((prod) => (subtotal += (prod.cantidad * prod.precio))); 
+        return subtotal;
     }
 
     return (
         <>
-            <CarritoContext.Provider value={{carrito, agregarProducto, quitarProducto, cantidadCarrito, cantidad}}>
+            <CarritoContext.Provider value={{carrito, agregarProducto, quitarProducto, calcularCantidad, calcularImporteTotal, vaciarCarrito}}>
                 {props.children}
             </CarritoContext.Provider>
         </>

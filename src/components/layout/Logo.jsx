@@ -5,7 +5,7 @@ const Logo = () => {
     return (
         <>
             <Link to={"/"} className="navbar-brand">
-                <img src={'./img/logo-blanco.png'} style={{"maxWidth": "10rem"}} />
+                <img src={'./img/logo-blanco.png'} style={{"maxWidth": "10rem"}} alt="Logo" />
             </Link>
         </>
     );

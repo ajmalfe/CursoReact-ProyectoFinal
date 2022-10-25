@@ -9,11 +9,13 @@ import Contacto from './components/content/Contacto';
 import Carrito from './components/content/Carrito';
 import Footer from './components/content/Footer';
 import { CarritoProvider } from './context/CarritoContext';
-import CartWidget from './components/layout/CartWidget';
+import Checkout from './components/content/Checkout';
 
 const App = () => {
 
     let listCategorias = ["Mouse", "Pendrive", "Auriculares", "Teclados"];
+
+    //cargarBaseDeDatos();
 
     return (
       <>
@@ -27,6 +29,7 @@ const App = () => {
               <Route path="/about" element={<About/>} />
               <Route path="/contacto" element={<Contacto/>} />
               <Route path="/carrito" element={<Carrito/>} />
+              <Route path="/checkout/:id" element={<Checkout/>} />
               <Route path="*" element={<h1>Error 404</h1>} />
             </Routes>
             <Footer/>
